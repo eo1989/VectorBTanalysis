@@ -48,7 +48,7 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.14.0.tgz#a371e91029ebf265015e64f81bfbf7d228c9681f"
   integrity sha512-OfdMsF+ZQgdKHP9jUbmDcRrP0eX90XXrsXIdyjLbkmSBzmMXPABB8eobUJtivaupucYaByz6WNe1PI1JuYm3qA==
 
-"@jupyter-widgets/base@^3.0.0":
+"@jupyter-widgets/base@^2 || ^3", "@jupyter-widgets/base@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@jupyter-widgets/base/-/base-3.0.0.tgz#3996d566cddb742d275b007e0713de1e17f55a44"
   integrity sha512-un1ZTHALCwE/SAYk2gEaonYM1JoaFyhosN8a3y2bhl4N26yCB3dP1PqGHLsAFur6ZB7fwuWwBEkIZx+nOwstAQ==
@@ -4445,6 +4445,19 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+"jupyter-matplotlib@file:../extensions/jupyter-matplotlib-0.7.3.tgz":
+  version "0.7.3"
+  resolved "file:../extensions/jupyter-matplotlib-0.7.3.tgz#a458ce061598cda8d5e7e2095fbfdad3cae03630"
+  dependencies:
+    "@jupyter-widgets/base" "^2 || ^3"
+
+"jupyterlab_theme_onedark@file:../extensions/jupyterlab_theme_onedark-1.0.2.tgz":
+  version "1.0.2"
+  resolved "file:../extensions/jupyterlab_theme_onedark-1.0.2.tgz#cad6cb6accdd509340dcd2758b54b42be40533b1"
+  dependencies:
+    "@jupyterlab/application" "^2.0.0"
+    "@jupyterlab/apputils" "^2.0.0"
+
 keyv@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-3.1.0.tgz#ecc228486f69991e49e9476485a5be1e8fc5c4d9"
@@ -7081,15 +7094,10 @@ vscode-languageserver-protocol@3.14.1, vscode-languageserver-protocol@^3.14.1:
     vscode-jsonrpc "^4.0.0"
     vscode-languageserver-types "3.14.0"
 
-vscode-languageserver-types@3.14.0:
+vscode-languageserver-types@3.14.0, vscode-languageserver-types@^3.14.0:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.14.0.tgz#d3b5952246d30e5241592b6dde8280e03942e743"
   integrity sha512-lTmS6AlAlMHOvPQemVwo3CezxBp0sNB95KNPkqp3Nxd5VFEnuG1ByM0zlRWos0zjO3ZWtkvhal0COgiV1xIA4A==
-
-vscode-languageserver-types@^3.14.0:
-  version "3.15.1"
-  resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.15.1.tgz#17be71d78d2f6236d414f0001ce1ef4d23e6b6de"
-  integrity sha512-+a9MPUQrNGRrGU630OGbYVQ+11iOIovjCkqxajPa9w57Sd5ruK8WQNsslzpa0x/QJqC8kRc2DUxWjIFwoNm4ZQ==
 
 vscode-ws-jsonrpc@0.1.1:
   version "0.1.1"

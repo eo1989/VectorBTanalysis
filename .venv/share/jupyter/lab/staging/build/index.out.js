@@ -971,31 +971,7 @@ function main() {
     console.error(e);
   }
   try {
-    extMod = require('@jupyter-widgets/jupyterlab-manager/');
-    extension = extMod.default;
-
-    // Handle CommonJS exports.
-    if (!extMod.hasOwnProperty('__esModule')) {
-      extension = extMod;
-    }
-
-    plugins = Array.isArray(extension) ? extension : [extension];
-    plugins.forEach(function(plugin) {
-      if (PageConfig.Extension.isDeferred(plugin.id)) {
-        deferred.push(plugin.id);
-        ignorePlugins.push(plugin.id);
-      }
-      if (PageConfig.Extension.isDisabled(plugin.id)) {
-        disabled.push(plugin.id);
-        return;
-      }
-      register.push(plugin);
-    });
-  } catch (e) {
-    console.error(e);
-  }
-  try {
-    extMod = require('@jupyterlab/google-drive/');
+    extMod = require('jupyterlab_theme_onedark/');
     extension = extMod.default;
 
     // Handle CommonJS exports.
@@ -1044,6 +1020,78 @@ function main() {
   }
   try {
     extMod = require('@krassowski/jupyterlab-lsp/');
+    extension = extMod.default;
+
+    // Handle CommonJS exports.
+    if (!extMod.hasOwnProperty('__esModule')) {
+      extension = extMod;
+    }
+
+    plugins = Array.isArray(extension) ? extension : [extension];
+    plugins.forEach(function(plugin) {
+      if (PageConfig.Extension.isDeferred(plugin.id)) {
+        deferred.push(plugin.id);
+        ignorePlugins.push(plugin.id);
+      }
+      if (PageConfig.Extension.isDisabled(plugin.id)) {
+        disabled.push(plugin.id);
+        return;
+      }
+      register.push(plugin);
+    });
+  } catch (e) {
+    console.error(e);
+  }
+  try {
+    extMod = require('jupyter-matplotlib/src/lab_extension');
+    extension = extMod.default;
+
+    // Handle CommonJS exports.
+    if (!extMod.hasOwnProperty('__esModule')) {
+      extension = extMod;
+    }
+
+    plugins = Array.isArray(extension) ? extension : [extension];
+    plugins.forEach(function(plugin) {
+      if (PageConfig.Extension.isDeferred(plugin.id)) {
+        deferred.push(plugin.id);
+        ignorePlugins.push(plugin.id);
+      }
+      if (PageConfig.Extension.isDisabled(plugin.id)) {
+        disabled.push(plugin.id);
+        return;
+      }
+      register.push(plugin);
+    });
+  } catch (e) {
+    console.error(e);
+  }
+  try {
+    extMod = require('@jupyterlab/google-drive/');
+    extension = extMod.default;
+
+    // Handle CommonJS exports.
+    if (!extMod.hasOwnProperty('__esModule')) {
+      extension = extMod;
+    }
+
+    plugins = Array.isArray(extension) ? extension : [extension];
+    plugins.forEach(function(plugin) {
+      if (PageConfig.Extension.isDeferred(plugin.id)) {
+        deferred.push(plugin.id);
+        ignorePlugins.push(plugin.id);
+      }
+      if (PageConfig.Extension.isDisabled(plugin.id)) {
+        disabled.push(plugin.id);
+        return;
+      }
+      register.push(plugin);
+    });
+  } catch (e) {
+    console.error(e);
+  }
+  try {
+    extMod = require('@jupyter-widgets/jupyterlab-manager/');
     extension = extMod.default;
 
     // Handle CommonJS exports.
